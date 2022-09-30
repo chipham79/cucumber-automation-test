@@ -50,14 +50,14 @@ public class WebDriverManage
 	
 	private WebDriver createFirefoxDriver() 
 	{
-		System.setProperty("webdriver.gecko.driver", userDirectory + "/webdrivers/geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", userDirectory + "/drivers/geckodriver.exe");
         return new FirefoxDriver();
     }
 	
 	
 	private WebDriver createChromeDriver() 
 	{	
-		System.setProperty("webdriver.gecko.driver", userDirectory + "/webdrivers/chromedriver.exe");
+		System.setProperty("webdriver.gecko.driver", userDirectory + "/drivers/chromedriver.exe");
         return new ChromeDriver();
     }	
 	

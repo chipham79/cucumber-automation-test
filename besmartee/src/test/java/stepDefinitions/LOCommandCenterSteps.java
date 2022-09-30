@@ -18,7 +18,7 @@ public class LOCommandCenterSteps
 
     @And("^input valid 'credentials'$")
     public void input_valid_credentials() throws Throwable {
-
+        
     }
 
     @And("^click on search button$")
