@@ -5,9 +5,9 @@ import org.openqa.selenium.WebDriver;
 public class PageObjectManager 
 {
 	public WebDriver driver;
-	public LenderLoginPage lenderLoginPage;
-	public LOCommandCenterPage loCommandCenterPage;
-	public PipelinePage pipelinePage;
+	private LenderLoginPage lenderLoginPage;
+	private LOCommandCenterPage loCommandCenterPage;
+	private PipelinePage pipelinePage;
 	
 	
 	public PageObjectManager(WebDriver driver) {
@@ -31,9 +31,5 @@ public class PageObjectManager
 		pipelinePage = new PipelinePage(driver);
 		return pipelinePage;
 	}
-	
-	
-	
-	
-	
+		
 }

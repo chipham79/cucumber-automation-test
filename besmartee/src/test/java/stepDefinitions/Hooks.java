@@ -7,9 +7,10 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 
-import io.cucumber.java.After;
-import io.cucumber.java.AfterStep;
+
 import io.cucumber.java.Scenario;
 import utils.TestContextSetup;
 
@@ -23,13 +24,13 @@ public class Hooks
 		this.testContextSetup = testContextSetup;
 	}
 	
-	@After
+	@AfterClass
 	public void AfterScenario() throws IOException 
 	{
 		testContextSetup.webDriverManage.closeDriver();
 	}
 	
-	@AfterStep
+	@AfterSuite
 	public void AddScreenShoot(Scenario scenario) throws IOException 
 	{
 		WebDriver driver = testContextSetup.webDriverManage.createDriver();

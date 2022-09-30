@@ -9,4 +9,8 @@ public class LenderLoginPage
 	public LenderLoginPage(WebDriver driver) {
 		this.driver = driver;
 	}
+	
+	public void openLenderPage(String url) {
+	    driver.get(url);
+	}
 }
