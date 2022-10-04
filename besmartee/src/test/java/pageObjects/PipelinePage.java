@@ -25,6 +25,6 @@ public class PipelinePage
 	public void openApplicationByPublicID(String loanPublicID) throws InterruptedException
 	{  
 	    Thread.sleep(2000);
-	    driver.findElement(By.cssSelector("a[href='/lender/loan/'"+loanPublicID+"'/application']")).click();
+	    driver.findElement(By.cssSelector("a[href='/lender/loan/"+loanPublicID+"/application']")).click();
 	}
 }
