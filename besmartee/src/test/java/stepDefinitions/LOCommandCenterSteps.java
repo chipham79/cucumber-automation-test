@@ -13,7 +13,7 @@ public class LOCommandCenterSteps
     
     
     
-    public LOCommandCenterSteps(TestContextSetup testContextSetup, LOCommandCenterPage loCommandCenterPage) {
+    public LOCommandCenterSteps(TestContextSetup testContextSetup) {
         super();
         this.testContextSetup = testContextSetup;
         this.loCommandCenterPage = testContextSetup.pageObjectManager.getLoCommandCenterPage();

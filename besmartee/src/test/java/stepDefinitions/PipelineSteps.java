@@ -24,6 +24,7 @@ public class PipelineSteps
     {
         pipelinePage.findLoanByPublicID(loanPublicID);
         pipelinePage.openApplicationByPublicID(loanPublicID);
+        Thread.sleep(5000);
     }
 
 }
