@@ -13,7 +13,6 @@ public class LenderLoginSteps
 	private String password = "P@ssword1";
 	
 	public LenderLoginSteps(TestContextSetup testContextSetup) {
-        super();
         this.testContextSetup = testContextSetup;
         this.lenderLoginPage = testContextSetup.pageObjectManager.getLenderLoginPage();
     }
