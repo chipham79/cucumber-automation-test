@@ -20,11 +20,8 @@ public class LenderLoginSteps
 
 
     @Given("^loan officer go to 'lender login page'$")
-    public void loan_officer_go_to_login_lender_page() throws Throwable 
-    {
-		System.out.println("Go to lender login page");
+    public void loan_officer_go_to_login_lender_page() throws Throwable {
 		lenderLoginPage.openLenderPage("https://staging.besmartee.com/lender/login/QQBNWFLI");		
-
     }
     
     @And("^input valid 'credentials'$")
