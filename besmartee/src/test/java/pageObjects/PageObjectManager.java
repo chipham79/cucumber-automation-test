@@ -2,12 +2,15 @@ package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 
+import utils.UiHelper;
+
 public class PageObjectManager 
 {
 	public WebDriver driver;
 	private LenderLoginPage lenderLoginPage;
 	private LOCommandCenterPage loCommandCenterPage;
 	private PipelinePage pipelinePage;
+	UiHelper uiHepler;
 	
 	
 	public PageObjectManager(WebDriver driver) {
@@ -16,7 +19,7 @@ public class PageObjectManager
 
 
 	public LenderLoginPage getLenderLoginPage() {
-		lenderLoginPage = new LenderLoginPage(driver);
+		lenderLoginPage = new LenderLoginPage(driver, uiHepler);
 		return lenderLoginPage;
 	}
 

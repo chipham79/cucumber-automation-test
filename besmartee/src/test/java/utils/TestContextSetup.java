@@ -10,7 +10,7 @@ public class TestContextSetup
 {
 	public WebDriver driver;
 	public PageObjectManager pageObjectManager;
-	public WebDriverManage webDriverManage;
+	public WebDriverManager webDriverManage;
 	
 	
 	public String message;
@@ -18,7 +18,7 @@ public class TestContextSetup
 	
 	public TestContextSetup() throws IOException 
 	{
-		webDriverManage = new WebDriverManage();
+		webDriverManage = new WebDriverManager();
 		pageObjectManager = new PageObjectManager(webDriverManage.createDriver());	
 	}
 }
