@@ -7,5 +7,5 @@ Feature: Message Function
     And input valid 'credentials'
     When search the loan by 'loan public id'
     When click on Message menu
-    And Input the message "Hello, Tom"
-    Then I validate the outcomes
+    And Input the message "Hello, Suzi"
+    Then I validate the outcomes message display

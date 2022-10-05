@@ -14,7 +14,6 @@ public class PipelineSteps
     
     public PipelineSteps(TestContextSetup testContextSetup) 
     {
-        super();
         this.testContextSetup = testContextSetup;
         this.pipelinePage = testContextSetup.pageObjectManager.getPipelinePage();
     }

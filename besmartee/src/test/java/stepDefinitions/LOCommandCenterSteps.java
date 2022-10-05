@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import org.junit.Assert;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,11 +12,9 @@ public class LOCommandCenterSteps
 {
     TestContextSetup testContextSetup;
     LOCommandCenterPage loCommandCenterPage;
-    
-    
-    
+    public String _message;
+        
     public LOCommandCenterSteps(TestContextSetup testContextSetup) {
-        super();
         this.testContextSetup = testContextSetup;
         this.loCommandCenterPage = testContextSetup.pageObjectManager.getLoCommandCenterPage();
     }
@@ -24,13 +24,17 @@ public class LOCommandCenterSteps
         loCommandCenterPage.clickMessageMenu();
     }
 
-    @Then("^I validate the outcomes$")
-    public void i_validate_the_outcomes() throws Throwable {
-
+    @Then("^I validate the outcomes message display$")
+    public void i_validate_the_outcomes() throws Throwable {        
+        boolean result = loCommandCenterPage.checkMessageDisplay(_message);
+        System.out.println(result);
+        Assert.assertTrue(result);
+        
     }
 
     @And("^Input the message \"([^\"]*)\"$")
     public void input_the_message_hello_tom(String message) throws Throwable {
+        this._message = message;
         loCommandCenterPage.sendMessageToBorrower(message);
     }
 

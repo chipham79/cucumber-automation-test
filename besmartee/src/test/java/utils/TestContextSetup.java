@@ -12,6 +12,10 @@ public class TestContextSetup
 	public PageObjectManager pageObjectManager;
 	public WebDriverManage webDriverManage;
 	
+	
+	public String message;
+	
+	
 	public TestContextSetup() throws IOException 
 	{
 		webDriverManage = new WebDriverManage();
