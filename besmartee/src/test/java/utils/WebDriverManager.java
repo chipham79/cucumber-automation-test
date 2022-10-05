@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 
-public class WebDriverManage 
+public class WebDriverManager 
 {	
 	private WebDriver driver;
 	private static String userDirectory = System.getProperty("user.dir");
@@ -61,4 +61,12 @@ public class WebDriverManage
         return new ChromeDriver();
     }	
 	
+    public WebDriver getDriver() throws IOException {
+        if(startDriver) {
+            driver = createDriver();
+        }
+
+        return driver;
+    }
+    	
 }
